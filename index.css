@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20vh);
+        opacity: 0;        
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100vh);
+    }
+    to {
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100vh) scaleY(-1);      
+    }
+    to {
+        transform: translateX(0) scaleY(-1);
+    }
+}
+
+@keyframes slideLeftNorm {
+    from {
+        transform: translateX(-100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRightNorm {
+    from {
+        transform: translateX(100vh);
+        opacity: 0;      
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear{
+    from{
+        scale: .5;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Aboreto', system-ui, sans-serif;
+    background-color: #ffffff;
+    user-select: none;
+}
+
+.home{
+    overflow: hidden;
+}
+
+/*Navbar Styles*/
+.navbar{
+    padding-top: 1vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-width: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    margin-left: 3vh;
+    margin-right: 3vh;
+    font-size: 2.5vh;
+}
+
+.navbar li:not(:nth-child(1)):not(:nth-child(2)):hover{
+    border-bottom-style: solid;
+    border-color: red;
+    transition: ease-in-out 100ms;
+}
+
+/*HomePage*/
+.backgroundText{  
+    position: relative;
+    font-size: 30vh;
+    text-align: center;
+    z-index: 1;
+}
+
+.backgroundText p{
+    animation: slideLeft 1s ease-in forwards;
+    height: 29vh;
+    padding: 0;
+    margin: 0;
+}
+
+.backgroundText .flipped{
+    animation: slideRight 1s ease-in forwards;
+    margin-top: -100vh;
+    display: inline-block;
+    transform: scaleY(-1);
+    color: rgb(66, 66, 66);
+}
+
+.homeImage img{
+    height: 70vh;
+    position: absolute;
+    z-index: 2;
+    top: 20vh;
+    left: 73vh;
+    animation: slideUp .8s ease-in forwards;
+}
+
+.sideMessage{
+    margin-left: 12vh;
+    margin-top: 8vh;
+    font-size: 2.5vh;
+    font-family: 'Adamina', serif;
+    font-weight: 50;
+    margin-bottom: 12vh;
+    animation: slideLeft 1.3s ease-in forwards;
+}
+
+.line{
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+/*about me*/
+.aboutMe{
+    height: 92vh;
+    scroll-margin-top: 8vh;
+}
+
+.tabledes{
+    position:relative;
+    margin-left: 22vh;
+    width: 80%;
+    text-align: justify;
+    font-size: 6.6vh;
+    font-weight: 100;
+
+}
+
+/*.tabledes td:nth-child(3) img{
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}*/
+
+.tabledes p{
+    font-size: 2.5vh;
+    font-family: 'Adamina', serif;
+    font-weight: 50;
+}
+
+.aboutMe a{
+    display: inline-block;
+    width: 43vh;
+    padding: 1vh;
+    font-family: 'Adamina', serif;
+    font-size: 2.5vh;
+    margin-left: 2vh;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(190, 190, 190);
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.aboutMe a:hover{
+    color: #e7e7e7;
+    background-color: rgb(59, 59, 59);
+    transition: 300ms;
+}
+
+/*Background*/
+.dot{
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+.dottedLine{
+    width: 0;
+    border-left-style: dotted;
+    border-width: .4vh;
+    height: 32vh;
+    position: absolute;
+}
+
+.background{
+    height: 81vh;
+    margin-top: 8vh;
+    scroll-margin-top: 16vh;
+}
+
+.background p{
+    font-family: 'Adamina', serif;
+    margin-left: 8vh;
+    text-align: justify;
+}
+
+.background .aboutStyle {
+    font-family: 'Agbalumo', system-ui, sans-serif;
+}
+
+.languages{
+    margin-left: 55vh;
+    /*animation: slideUp ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;*/
+}
+
+.languages ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.languages ul img{
+    width: 10vh;
+    padding-inline: 5vh;
+}
+
+/*Footer*/
+footer{
+    margin-top: 40vh;
+    position: relative;
+    background-color: rgb(15, 15, 15);
+    height: 30vh;
+    width: 87.5%;
+    font-family: 'Poppins', sans-serif;
+    color: #f3f3f3;
+    padding-top: .1vh;
+    padding-left: 25vh;
+}
+
+footer p:first-child{
+    font-size: 4vh;
+}
+
+footer p {
+    font-size: 2.5vh;
+}
+
+footer ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: -5vh;
+}
+
+footer li{
+    padding-inline: 1vh;
+}
+
+footer ul img{
+    width: 5vh;
+}
+
+footer .logo{
+    position: absolute;
+    width: 20vh;
+    top: 6vh;
+    left: 157vh;
+}
