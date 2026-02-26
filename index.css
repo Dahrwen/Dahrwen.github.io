@@ -114,7 +114,7 @@ body{
 /*HomePage*/
 .backgroundText{  
     position: relative;
-    font-size: 15vw;
+    font-size: 14.5vw;
     text-align: center;
     z-index: 1;
 }
@@ -128,18 +128,17 @@ body{
 
 .backgroundText .flipped{
     animation: slideRight 1s ease-in forwards;
-    margin-top: -100vh;
     display: inline-block;
     transform: scaleY(-1);
     color: rgb(66, 66, 66);
 }
 
 .homeImage img{
-    height: 70vh;
+    width: 24vw;
     position: absolute;
     z-index: 2;
     top: 20vh;
-    left: 36vw;
+    left: 35.5vw;
     animation: slideUp .8s ease-in forwards;
 }
 
