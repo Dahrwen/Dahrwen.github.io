@@ -89,6 +89,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 93%;
 }
 
 .navbar ul{
@@ -117,6 +118,7 @@ body{
     font-size: 14.5vw;
     text-align: center;
     z-index: 1;
+    height: 65vh;
 }
 
 .backgroundText p{
@@ -126,11 +128,18 @@ body{
     margin: 0;
 }
 
+.backgroundText p:first-child{
+    position:relative
+}
+
 .backgroundText .flipped{
     animation: slideRight 1s ease-in forwards;
     display: inline-block;
     transform: scaleY(-1);
     color: rgb(66, 66, 66);
+    position: absolute;
+    top: 14vw;
+    left: 5.5vw;
 }
 
 .homeImage img{
